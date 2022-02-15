@@ -1,0 +1,209 @@
+header{
+  background-color: rgba(255, 255, 255,.78);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .3) ;
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  /* position: fixed; */
+}
+
+.copyright{
+  background-color:darkgray;
+  text-align: center;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.hero h1{
+  font-size: 60px;
+  padding-top: 70px;
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.hero p{
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.form-group{
+  display: inline-block;
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.custom-file-label{
+  text-align: left;
+  
+}
+
+
+.hero{
+  padding-top: 200px;
+  background-color: darkgray;
+  background-image: url(../imgs/bg.png);
+  background-color: rgba(255,255,255,0.1);
+  background-blend-mode:overlay;
+  height: 750px;
+  /* background-repeat: repeat-x; */
+  background-position:left bottom ;
+  padding-top: 150px;
+  text-align: center;
+  z-index: 10;
+}
+
+.Uservoice{
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+
+.User-slider ul{
+  font-size: 20px;
+  position: relative;
+}
+
+.slider-fade >li {
+  position: absolute;
+  list-style: none;
+  visibility: hidden;
+  animation: anime_slider_fade 16s 0s infinite;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-fade > li:nth-of-type(2){
+  animation-delay: 4s;
+
+}
+
+.slider-fade > li:nth-of-type(3){
+  animation-delay: 8s;
+}
+
+.slider-fade > li:nth-of-type(4){
+  animation-delay: 12s;
+}
+
+@keyframes anime_slider_fade{
+  0%{
+    visibility:visible;
+    opacity: 0;
+  }
+  12%{
+    opacity: 1;
+  }
+  20.0%{
+    opacity: 1;
+  }
+
+  30.0%{
+    opacity: 0;
+  }
+
+  50.0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.qa{
+  text-align: center;
+}
+
+.qa h1{
+  margin-top: 200px;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+  
+}
+
+.qa dl{
+  margin: 0;
+}
+
+.qa dl>div{
+  margin-bottom: 10px;
+}
+.qa dt{
+  font-size: 20px;
+  font-weight: bold;
+  color: slategrey;
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.qa dt::before{
+  content:'Q,';
+  margin-right: 10px;
+}
+
+.qa dt::after{
+  content: '+';
+  position: absolute;
+  top: 8px;
+  right: 400px;
+  transition: transform .3s;
+}
+
+.qa dd{
+  padding: 8px;
+  margin: 0;
+  display: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: darkgrey;
+}
+.qa dd::before{
+  content:'A,';
+  margin-right: 20px;
+}
+
+dl>div.appear dt::after{
+  transform: rotate(45deg);
+}
+
+dl>div.appear dd{
+  display: block;
+  animation: .5s feadein;
+}
+
+.hvoice{
+  height: 600px;
+  background-image: url(../imgs/image.png);
+  background-color: rgba(255,255,255,0.5);
+  background-blend-mode:overlay;
+  margin-top: 100px;
+}
+
+.hvoice h2{
+  padding-top: 130px;
+  font-weight: bold;
+  font-size:35px;
+  color: rgba(0, 0, 0, .6);
+}
+
+.hvoice h3{
+  padding-top: 100px;
+  font-weight: bold;
+  font-size: 25px;
+  color: rgba(0, 0, 0, .6);
+}
+
+.copyright{
+  background-color:rgba(0, 0, 0, .6);
+  margin-top: -200px;
+  padding: 50px
+}

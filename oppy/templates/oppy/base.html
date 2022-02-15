@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  {% load bootstrap4 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery='full' %}
+  <link rel="stylesheet"  href="{% static 'css/style.css' %}">
+  <link rel="stylesheet"  href="{% static 'css/style2.css' %}">
+  <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+ 
+  <title>Oppy.py | {% block title %}{% endblock %}</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="">
+        <h1>
+          <img src="{% static 'imgs/Logo3.png' %}"
+          alt="opp"
+          width="500"
+          height="90">
+        </h1>
+      </a>
+  </header>
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href='#'>oppy.py</a>
+  </nav> -->
+  <div class="col-auto">
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer class="copyright">
+    <small> (c) ikeda.shinosuke </small>
+  </footer>
+  
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+
+
+</html>

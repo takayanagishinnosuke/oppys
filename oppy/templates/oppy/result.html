@@ -1,0 +1,68 @@
+{% extends 'oppy/base.html' %}
+{% block title %}oppy.py結果{% endblock %}
+
+{% block content %}
+<div class="result">
+    <h4 class="mt-4 mb-5 border-bottom">結果発表</h4>
+
+  <table class ='table'>
+    <tbody>
+      <tr>
+        <tr>
+          <td>画像名</td>
+          <td>{{ photo_name }}</td>
+        </tr>
+        <tr>
+          <td>ファイル</td>
+          <td><img class="preview-img" src={{ photo_data }}></img></td>
+        </tr>
+        <td>結果</td>
+        <td>{{ predicted }} カップ</td>
+      </tr>
+      <tr>
+        <td>おっぱい確率</td>
+        <td>{{ percentage }} %</td>
+      </tr>
+      {% if 'A' in predicted %}
+      <tr>
+        <td>コメント</td>
+        <td>大丈夫!生きていればいいことあるから!</td>
+      </tr>
+      {% elif 'B' in predicted %}
+      <tr>
+        <td>コメント</td>
+        <td>私は嫌いではない!</td>
+      </tr>
+      {% elif 'C' in predicted %}
+      <tr>
+        <td>コメント</td>
+        <td>みんな大好き!有難う!</td>
+      </tr>
+      {% elif 'D' in predicted %}
+      <tr>
+        <td>コメント</td>
+        <td>最高だ!!ブラボー!</td>
+      </tr>
+      {% elif 'E' in predicted %}
+      <tr>
+        <td>コメント</td>
+        <td>なんという!!ああ神よ!</td>
+      </tr>
+      {% elif 'F' in predicted %}
+      <tr>
+        <td>コメント</td>
+        <td>おおおああああああああっあっ!!!!</td>
+      </tr>
+      {% else %}
+      <tr>
+        <td>コメント</td>
+        <td>測定不可能!!!</td>
+      </tr>
+    {% endif %}
+    </tbody>
+  </table>
+  <a href="{% url 'oppy:index' %}" class = 'btn btn-primary'>メニューへ戻る</a>
+ 
+</div>
+
+{% endblock %}

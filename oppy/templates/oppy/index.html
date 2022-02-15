@@ -1,0 +1,70 @@
+{% extends 'oppy/base.html' %}
+{% block title %}oppy.pyメニュー{% endblock %}
+
+{% block content %}
+<div class="hero">
+  <h1>限りなく先進的でエモい</h1>
+  <p>アプリを利用すると<br>知らなかった事実が分かる</p>
+
+  <form action="{% url 'oppy:predict' %}" method="post" class="form" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="form-group">
+    <div class="custom-file">
+      {{ form.image }}
+      <label class="custom-file-label" for='customFile'>
+        ファイルを選択
+      </label>
+    </div>
+  </div>
+  <div>
+  <button type="submit" class="btn btn-primary">クリック!</button>
+</div>
+  </form>
+</div>
+
+<div class="Uservoice">
+  <h1>ユーザーの声</h1>
+  <div class="User-slider">
+    <ul class="slider-fade">
+      <li>「ただただ感動した。」<br>ひろし(45歳)</li>
+      <li>「有難う。言葉が無い」<br>かずのり(35歳)
+      </li>
+      <li>「本当に素晴らしい」<br>けいすけ(57歳)</li>
+      <li>「キモイ。死ねばいいのに」<br>みゆき(23歳)
+      </li>
+    </ul>
+  </div>
+
+  <div class="qa">
+    <h1>FAQ</h1>
+      <dl>
+        <div>
+          <dt>どのように使うのですか？</dt>
+          <dd>好きな女の写真を選ぶだけだよ。<br>
+            なんにも難しくないよ。
+          </dd>
+        </div>
+        <div>
+          <dt>どのような場面で使用するのですか？</dt>
+          <dd>ふと胸囲が知りたくなったときだね。<br>
+            それ以外の用途はないよ。
+          </dd>
+        </div>
+        <div>
+          <dt>これはコンプライアンス違反では？</dt>
+          <dd>使う人のモラル次第だよ。<br>
+          そんなに深く考えてはいけないよ。
+          </dd>
+        </div>
+        </dl>
+  </div>
+
+  <div class="hvoice">
+    <h2>こんな楽しい体験は<br>
+      年間で50回もないこともない気がする。</h2>
+    <h3>まずは体験してみようじゃないか。<br>
+    減るもんでもない。残るのはただ虚しさだけだ。</h3>
+  </div>
+</div>
+
+{% endblock %}
