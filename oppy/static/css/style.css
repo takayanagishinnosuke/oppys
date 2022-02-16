@@ -156,7 +156,7 @@ header{
   content: '+';
   position: absolute;
   top: 8px;
-  right: 25%;
+  right: 30%;
   transition: transform .3s;
 }
 
