@@ -209,3 +209,61 @@ dl>div.appear dd{
   margin-top: -200px;
   padding: 50px
 }
+
+@media (max-width:600px){
+
+  header img{
+    width:100%;
+  }
+   
+
+  .hero{
+    width: 100%;
+    background-size: cover;
+    height: 600px;
+  }
+
+  .hero h1{
+    font-size: 120%;
+  }
+
+  .hero p{
+    font-size: large;
+  }
+  .Uservoice{
+    margin-bottom: 0;
+  }
+  .Uservoice h1{
+    font-size: 120%;
+  }
+  .User-slider li{
+    font-size:65%;
+  }
+  .qa h1{
+    margin-top: 100px;
+  }
+  .qa dt{
+    font-size:70%;
+    position: static;
+  }
+  .qa dd{
+    font-size: 70%;
+  }
+  .hvoice{
+    background-size: cover;
+    height: 300px;
+  }
+
+  .hvoice h2{
+    font-size: 100%;
+  }
+  .hvoice h3{
+    padding-top: 30px;
+    font-size: 90%;
+  }
+
+  .copyright{
+    margin-top: auto;
+  }
+
+}
