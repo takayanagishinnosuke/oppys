@@ -1,4 +1,21 @@
+
 .result{
   margin-top: 200px;
-  margin-bottom: 300px
+  margin-bottom: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
 };
+
+@media (max-width:600px) {
+  .preview-img{
+    height: 50px;
+    width: 10vw;
+  }  
+  tbody{
+    width: 90%;
+    height: 100vw;
+  }
+  header img{
+    width: 10px;
+  }
+}
